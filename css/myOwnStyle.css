@@ -9,11 +9,11 @@ footer img{width:20px}
 article.first p:first-of-type{
   background-color: #fff;
   position:relative;
-}
+
   /*static : as default
     relative: top, bottom, left & righ relative to the initial start position
     absolute: to the container
-    *
+    */
     top:-10px;
     left:40px;
 }

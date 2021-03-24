@@ -5,42 +5,50 @@ aside{background-color:#063970}
 footer{background-color:#873e23}
 footer img{width:20px}
 
-/* getting articles float*/
+/* getting articles float*
 section.main article{
   float: right;
   overflow: auto;
 }
 /* section has no content, so, it doesnt show,
-waht happendif I put width and height to section */
+waht happendif I put width and height to section *
 section{
   height: 400px;
 }
-/* now assing width and height to articles  */
+/* now assing width and height to articles  *
 section.main article{
   width: 50%;
   height:  50%;
   overflow: auto;
 }
 /* change section.main article.float to left..
-*Borders and Css Model: */
+*Borders and Css Model: *
 section.main article{
   border:10px solid  #312106;
 }
+/* ok hide the overflow I dont want overlaps *
 section{
   overflow: hidden;
 }
-
-/*we have to chage width we can reduce de %
- */
+/*we have to chage width we can reduce de % *
 section.main article{
   width: 45%;
   height: 45%;
-/*and height
-  2 columns,width= 500/2 - 10*4 px ,
-  take in count 2 widths, 4 borders, 2 lefts and
-  2 righs *
-  width:210px;
-/*now height. take in count 2 heigths and 4 borders,
-  2tops and 2bottoms*
-  height: 210px;*/
-  }
+  background: #eeeee4;
+}
+/* what if I change to px*
+header, nav,section,footer,
+aside{
+  width: 600px;
+  overflow: hidden;
+}
+
+/* change width I want 2 columns,
+  width= 600/2 - 10*2 px ,
+  take in count 2 widths, 2 borders, left and righ *
+  section.main article{  width:280px; }
+  /*now height.
+  height = 400/2 - 10*2
+  take in count 2 heigths and 2 borders , top and bottom *
+  section.main article{  height:180px; }
+*/

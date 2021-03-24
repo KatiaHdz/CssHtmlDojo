@@ -1,0 +1,94 @@
+header{ background-color: #1e81b0 }
+nav{background-color:#76b5c5 }
+section{background-color:#eab676}
+aside{background-color:#063970}
+footer{background-color:#873e23}
+footer img{ width:20px }
+
+html *{
+  margin: 0px;
+  padding: 0px;
+}
+
+/* put all in px */
+header, nav,footer{
+  width: 800px;
+  }
+
+section{
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  float: right;
+}
+
+aside.testimonios{
+  width: 200px;
+  height: 400px;
+  overflow: hidden;
+  float: left;
+}
+/* until here, look a mess, what about if I use clear? */
+footer.socialmedia{
+  clear:  both;
+}
+/* uh? what happend... the container of section and aside is body... */
+body{ width: 800px; }
+
+/* I want this more beuty */
+header,nav,section,aside,footer{
+  border: 10px solid #154c79;
+  border-radius: 40px 20px;
+  /*
+    4 val: top-left,top-right , bottom-right , bottom-left
+    3 val: top-left, top-right and bottom-left, bottom-right
+    2 val: top-left and bottom-right, top-right and bottom-left corners
+**
+  what if I want padding?
+  */
+  padding: 20px 2px 2px
+}
+
+/* wee need to change the body width
+  800 + 40 (borders 2 times 10 left + 10 right ) + 8 (padding 2 times 2 left + 2 right)*/
+body{
+  width: 848px;
+}
+
+
+/* now i what more bauty here... */
+header {
+
+  background-image: url("../images/miPerritoSurf.png");
+  /**/
+  background-size: contain;
+  background-position: left;
+  height: 100px;
+  /* I dont want the dog on all header! */
+  background-repeat: no-repeat;
+  background-color: #fff
+  }
+/* fixing the text on header an so... */
+header h1{
+  margin-left: 100px;
+}
+nav {
+  max-width: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+
+/*
+header
+  h1
+nav
+  a
+section
+  article
+    h2
+    p
+aside
+*/
