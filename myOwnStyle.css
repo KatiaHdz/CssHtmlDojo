@@ -1,0 +1,80 @@
+header{ background-color: #1e81b0 }
+nav{background-color:#555756 }
+section{background-color:#419482}
+aside{background-color:#063970}
+footer {background-color:#873e23}
+footer img{width:20px;}
+footer .social {
+  border: 2px black dotted;
+  display: inline-block;
+  margin-bottom: 30px;
+ }
+footer .box {
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+}
+/*jugando con position y float*/
+
+/*article.first p:first-of-type{
+  background-color: #fff;
+  color: black;
+  position:relative;
+}*/
+  /*static : as default
+    relative: top, bottom, left & righ relative to the initial start position
+    absolute: to the container
+    *
+    top:-10px;
+    left:40px;
+}
+
+/* position:relative + position:absolute*
+article.first p:first-of-type{ position: absolute;}
+/*position arelative to move p relative of <article> *
+article.first {
+  position: relative;
+  background: #eeeee4;
+  margin:10px;
+/*show how works with top and left*
+
+  }
+/*go to the static again*
+article.first p {
+  position: static !important;
+  }
+
+/* getting article as flatting column*
+section.main{
+  position: relative;
+}
+article.first, article.second{
+  background: #eeeee4;
+  color: black;
+  padding:5px;
+  margin:0;
+  position: absolute;
+  width: 200px;
+  top:0;
+  width: 49%
+}
+article.first{ right: 0 }
+article.second{ left: 0 }
+
+section.main article{
+  height: 200px;
+  overflow: auto;
+
+
+}
+/* 3rd article is hidden now, how can i see it?: margin on article
+or padding on section*
+section.main {
+  padding-top: 200px
+}
+*/
+
+#b4 {
+  background-color: chartreuse;
+}
