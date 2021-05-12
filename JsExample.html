@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    	* { padding: 0; margin: 0; }
+    	canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+    <script>
+      window.onload=function(){
+        document.getElementById("¨theMult").innerHTML += multiplication(4, 3);
+      //"<span style=\"color:red\">"+ multiplication(4, 3)+"</p>";
+      }
+        function myFunction() {
+          document.getElementById("demo").innerHTML += "Hello World";
+          var x = document.getElementById("demo");   // Get the element with id="demo"
+        x.style.color = "red";                     // Change the color of the element
+        }
+        function multiplication(p1, p2, x=true) {
+          return p1 * p2;
+        }
+    </script>
+  </head>
+  <body>
+
+  <div class="myclass">
+    <p id="demo">Click the button to change the text in this paragraph.</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="¨theMult">the result of multiplication </p>
+  </div>
+  </body>
+</html>

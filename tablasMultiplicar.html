@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+        html body{
+        width:100%;
+        height:100%;
+        background-image: url("images/miPerritoSurf.svg");
+        background-repeat: no-repeat;
+        background-size: 190px;
+         background-attachment: fixed;
+        background-position: right bottom;
+        background-color: #154c79
+          }
+          .theResult{ clear:both}
+      .factor , .result{
+        width:200px;
+        height:200px;
+        border: 10px solid #fff;
+        float: left;
+        margin:5px;
+        color:#eeeee4;
+        font-size: 40px;
+        text-align:center;
+        font-size: 80px;
+      }
+      #welcome{
+        position: absolute;
+        height:100%;
+        width:100%;
+        background:#eeeee4;
+        font-size:200px;
+        color:#154c79;
+        text-align:center;
+      }
+    #welcomeTxt{
+      position:absolute;
+      top:25%;
+      left:50%;
+    }
+    .theFactors{
+
+
+    }
+    </style>
+
+
+    <title>MymultiplicationGame</title>
+    <script type="text/javascript">
+      window.onload=function(){
+     setTimeout(alert("Helllo Dude!!"), 30000)
+    //setTimeout(function, milliseconds): Executes a function, after waiting a specified number of milliseconds.
+        }
+
+      var myVar = setInterval(myCounter, 3000);
+      var i = 1;
+      var theCorrectResult;
+
+
+      function myCounter() {
+        document.getElementById("welcomeTxt").innerHTML = i++;
+        if(i>3){
+            myStopFunction()
+        }
+      }
+
+      function myStopFunction() {
+        clearInterval(myVar);
+        document.getElementById("welcome").style.visibility="hidden";
+        getFactors()
+      }
+      function getFactors(){
+        document.getElementById("customResult").value = ""
+        var p1  =  Math.round(Math.random() * 100);
+        var p2  =  Math.round(Math.random() * 10);
+        document.getElementById("factor1").innerHTML=p1;
+        document.getElementById("factor2").innerHTML= p2;
+        theCorrectResult =  multiplication(p1, p2)
+}
+var respuestasCorrectas = 0
+var respuestasIncorrectas = 0
+
+function letsmult(){
+    if ( document.getElementById("customResult").value == theCorrectResult ){
+        //++respuestasCorrectas
+        //respuestasCorrectas +=1
+        respuestasCorrectas =  respuestasCorrectas +1
+    }
+    else{
+      //respuestasIncorrectas--
+      respuestasIncorrectas +=1
+        }
+
+    getFactors()
+}
+
+    function multiplication(p1, p2) {
+        return p1 * p2;
+      }
+
+    function showResults(){
+      document.getElementById("goodOnes").innerHTML=respuestasCorrectas;
+      document.getElementById("badOnes").innerHTML=respuestasIncorrectas;
+    }
+    </script>
+  </head>
+  <body>
+    <div id="welcome">
+      <p id="welcomeTxt">  </p>
+    </div>
+      <div class="theFactors">
+        <p class="factor" id="factor1"></p>
+        <p class="factor" id="factor2"></p>
+
+      </div>
+      <div class="response">
+        <input id="customResult" type="text" />
+        <button onclick="letsmult()">Try it</button>
+        <button onclick="showResults()">Stop it</button>
+      </div>
+      <div class="theResult">
+        Buenas
+        <p class="result" id="goodOnes"> </p>
+        Malas
+        <p class="result" id="badOnes">   </p>
+
+      </div>
+
+  </body>
+</html>
